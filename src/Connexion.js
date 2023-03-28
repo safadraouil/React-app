@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
+import * as PropTypes from "prop-types";
 import "./Global.scss";
 import axios from "axios";
-import Modal from "./Modal";
 import Toast from "./Tosats";
 
 const Connexion = ({ setToken }) => {
@@ -34,7 +34,7 @@ const Connexion = ({ setToken }) => {
       setToast(true);
     } else {
       axios
-        .post("https://Videos-api.onrender.com/users/login", inputs)
+        .post("https://movi-app.onrender.com/users/login", inputs)
 
         .then((data) => {
           const tokenValue = {
@@ -71,7 +71,6 @@ const Connexion = ({ setToken }) => {
     }
   };
 
-  console.log("showToast", showToast);
   return (
     <div className="second-block-contact">
       <div className="Right-Card-contact">
@@ -118,10 +117,6 @@ const Connexion = ({ setToken }) => {
               </div>
             </form>
           </div>
-
-          <div className="row">
-            <Modal></Modal>
-          </div>
         </div>
       </div>
       <div className="Left-Card-contact">
@@ -131,5 +126,9 @@ const Connexion = ({ setToken }) => {
       </div>
     </div>
   );
+};
+
+Connexion.propTypes = {
+  setToken: PropTypes.func
 };
 export default Connexion;

@@ -14,7 +14,7 @@ function MyList() {
 
   useEffect(() => {
     axios
-      .get("https://Videos-api.onrender.com/users/findVideo")
+      .get("https://movi-app.onrender.com/users/findVideo")
       .then((data) => {
         setItems(data.data);
       })
@@ -33,8 +33,8 @@ function MyList() {
               {" "}
               You can share video files online for free using tools like
               WeTransfer, Dropbox, and Google Drive. But if you need to review
-              your videos with teammates and stakeholders, you're better off
-              with VideoSahre".
+              your videos with teammates and stakeholders, you are better off
+              with VideoSahre.
             </p>
           </div>
 

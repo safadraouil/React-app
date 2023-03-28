@@ -2,6 +2,7 @@ import React from "react";
 import "./items.scss";
 import "./items.scss";
 import { Player } from "video-react";
+import * as PropTypes from "prop-types";
 function Items(props) {
   const { items, type, removeHandler } = props;
   const Admin = type === "Admin" ? true : false;
@@ -59,4 +60,9 @@ function Items(props) {
     </div>
   );
 }
+Items.propTypes = {
+  items: PropTypes.array,
+  type: PropTypes.string,
+  removeHandler: PropTypes.func
+};
 export default Items;

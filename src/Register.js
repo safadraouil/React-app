@@ -43,7 +43,7 @@ export default function Register() {
       setToast(true);
     } else {
       axios
-        .post("https://Videos-api.onrender.com/users/register", inputs)
+        .post("https://movi-app.onrender.com/users/register", inputs)
 
         .then(() => {
           console.log();

@@ -13,7 +13,7 @@ function App() {
   var userToken = JSON.parse(localStorage.getItem("token"));
   const handleRemove = (items) => {
     axios
-      .delete("https://Videos-api.onrender.com/users/removeVideo", {
+      .delete("https://movi-app.onrender.com/users/removeVideo", {
         Name: items
       })
       .then((res) => console.log("OK"))
@@ -21,7 +21,7 @@ function App() {
   };
   const onSubmit = (data) => {
     axios
-      .post("https://Videos-api.onrender.com/users/createVideo", data)
+      .post("https://movi-app.onrender.com/users/createVideo", data)
       .then((data) => {
         setItem(data.data);
       })
@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     let timer = "";
     axios
-      .get("https://Videos-api.onrender.com/users/findVideo")
+      .get("https://movi-app.onrender.com/users/findVideo")
       .then((data) => {
         timer = setTimeout(() => {
           setItems(data.data);

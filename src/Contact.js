@@ -31,7 +31,7 @@ export default function Contact() {
       setToast(true);
     } else {
       axios
-        .post("https://Videos-api.onrender.com/users/mail", inputs)
+        .post("https://movi-app.onrender.com/users/mail", inputs)
         .then((data) => console.log(data))
         .catch((err) => {
           console.error(err);

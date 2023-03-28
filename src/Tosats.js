@@ -1,6 +1,7 @@
 import React from "react";
 import "./Global.scss";
-const Toast = ({ show, setToast, text }) => {
+import * as PropTypes from "prop-types";
+const Toast = ({ setToast, text }) => {
   return (
     <div
       className="toast show"
@@ -24,6 +25,11 @@ const Toast = ({ show, setToast, text }) => {
       <div className="toast-body">{text}</div>
     </div>
   );
+};
+
+Toast.propTypes = {
+  setToast: PropTypes.func,
+  text: PropTypes.string
 };
 
 export default Toast;
